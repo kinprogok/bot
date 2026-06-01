@@ -22,7 +22,7 @@ import asyncio
 safe_pets = "safe_pets.json"
 
 
-bot = Bot("bot = Bot(os.environ["BOT_TOKEN"])")
+bot = Bot(os.environ["BOT_TOKEN"])
 
 dp = Dispatcher()
 
