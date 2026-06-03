@@ -64,6 +64,9 @@ class pet:
             self.power +=5
             self.max_hp +=20
 
+    
+    def Nothing(self):
+        return
 
     def heal(self):
         self.update_energy()
