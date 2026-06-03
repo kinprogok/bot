@@ -81,10 +81,11 @@ class pet:
         now = time.time()
         time_past = now - self.last_update
         energy_add = int(time_past//10)
+        if self.energy < 0:
+            self.energy = 0
         if energy_add > 0:
                 self.energy +=energy_add
-        if self.energy < 0:
-                    self.energy = 0
+        
 
 
                 if energy_add > self.max_energy:
