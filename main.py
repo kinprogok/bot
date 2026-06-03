@@ -137,7 +137,7 @@ async def fight(message:Message):
 async def pet_train(callback: CallbackQuery):
     user_id = callback.from_user.id
     current_pet = get_pet(user_id)
-    if current_pet.energy < 10
+    if current_pet.self.energy < 10
         await callback.message.answer("Нехватает энергии!")
         return
     current_pet.upgrade()
