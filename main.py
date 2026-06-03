@@ -140,10 +140,11 @@ async def pet_train(callback: CallbackQuery):
     if energy < 10:
         await callback.message.answer("Не хватает энергии")
         return
-        
-    current_pet.upgrade()
-    safe()
-    await callback.answer("Успешно")
+    if energy >= 10:
+        current_pet.upgrade()
+        safe()
+        await callback.answer("Успешно")
+    
 
 @router.callback_query(F.data == "no")
 async def no_duel(callback: CallbackQuery):
