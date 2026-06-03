@@ -135,12 +135,11 @@ async def fight(message:Message):
 
 @router.callback_query(F.data == "train")
 async def pet_train(callback: CallbackQuery):
-    energy = self.energy
-    if energy < 10
-        await callback.message.answer("Нехватает энергии!")
-        return
     user_id = callback.from_user.id
     current_pet = get_pet(user_id)
+    if current_pet.energy < 10
+        await callback.message.answer("Нехватает энергии!")
+        return
     current_pet.upgrade()
     safe()
     await callback.answer("Успешно")
