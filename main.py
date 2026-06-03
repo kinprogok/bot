@@ -38,9 +38,7 @@ router = Router()
 
 ikb =InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text = "Тренироваться", callback_data="train")],
-    [InlineKeyboardButton(text = "Лечиться", callback_data="heal")],
-    [InlineKeyboardButton(text = "Восполнить энергию", callback_data="energy")]
-
+    [InlineKeyboardButton(text = "Лечиться", callback_data="heal")]
 ])
 
 ikb_battle = InlineKeyboardMarkup(inline_keyboard=[
